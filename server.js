@@ -5,11 +5,12 @@ const app = express();
 const PORT = 3001;
 
 app.use(express.static('public'));
+app.use(express.json());
 
 app.get('/notes', (req, res) => 
-    res.send('HELLO WORLD')
+    res.sendFile(path.join(__dirname, 'public/notes.html'))
 );
 
 app.listen(PORT, () =>
-  console.log(`Example app listening at http://localhost:${PORT}`)
+    console.log(`Example app listening at http://localhost:${PORT}`)
 );
