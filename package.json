@@ -10,6 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "node": "^18.13.0"
+    "fs": "^0.0.1-security",
+    "node": "^18.13.0",
+    "path": "^0.12.7",
+    "util": "^0.12.5"
   }
 }
