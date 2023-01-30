@@ -12,18 +12,18 @@ notes.post('/', (req, res) => {
     console.info(`${req.method} request received to add a tip`);
     console.log(req.body);
 
-    const { noteTitle, noteDesc } = req.body;
+    const { title, text } = req.body;
 
     if (req.body) {
         const newNote = {
-        noteTitle,
-        noteDesc,
+        title,
+        text,
         };
 
         readAndAppend(newNote, './db/db.json');
-        res.json(`Tip added successfully 🚀`);
+        res.json(`Note added successfully`);
     } else {
-        res.error('Error in adding tip');
+        res.error('Error in adding note');
     }
 });
 
